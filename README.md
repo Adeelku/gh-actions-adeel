@@ -19,7 +19,7 @@
 
 ---
 
-## Section 1 — What is GitHub Actions? (15 min)
+## Section 1 — What is GitHub Actions? (15 min) | 🕑 3:00 PM – 3:15 PM
 
 ### Talking Points
 
@@ -38,7 +38,7 @@
 
 ---
 
-## Section 2 — Core Concepts (25 min)
+## Section 2 — Core Concepts (25 min) | 🕑 3:15 PM – 3:40 PM
 
 > **MS Learn module:** [Identify the components of GitHub Actions](https://learn.microsoft.com/en-us/training/modules/github-actions-automate-tasks/2b-identify-components-workflow)
 
@@ -125,7 +125,7 @@ Show the audience the **"Run workflow"** button in the Actions tab.
 
 ---
 
-## Section 3 — Workflow Syntax Essentials (30 min)
+## Section 3 — Workflow Syntax Essentials (30 min) | 🕑 3:40 PM – 4:10 PM
 
 > **MS Learn module:** [Build continuous integration workflows by using GitHub Actions](https://learn.microsoft.com/en-us/training/modules/github-actions-ci/)
 
@@ -238,7 +238,7 @@ build ──▶ test ──▶ deploy
 
 ---
 
-## Section 4 — Secrets & Variables (20 min)
+## Section 4 — Secrets & Variables (20 min) | 🕑 4:10 PM – 4:30 PM
 
 > **MS Learn module:** [Manage encrypted secrets](https://learn.microsoft.com/en-us/training/modules/manage-github-actions-enterprise/manage-encrypted-secrets)
 
@@ -314,7 +314,7 @@ jobs:
 
 ---
 
-## Section 5 — Environments & Deployments (20 min)
+## Section 5 — Environments & Deployments (20 min) | 🕑 4:30 PM – 4:50 PM
 
 > **MS Learn module:** [Build and deploy applications to Azure by using GitHub Actions](https://learn.microsoft.com/en-us/training/modules/github-actions-cd/)
 
@@ -428,7 +428,7 @@ build-and-test ──▶ deploy-staging (auto) ──▶ deploy-production (requ
 
 ---
 
-## Bonus Topics (if time allows)
+## Bonus Topics (if time allows) | 🕑 4:50 PM+
 
 ### Caching Dependencies
 
