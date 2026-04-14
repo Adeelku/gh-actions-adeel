@@ -1,0 +1,24 @@
+name: Job Dependencies
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building..."
+
+  test:
+    needs: build                  # waits for build to succeed
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Testing..."
+
+  deploy:
+    needs: [build, test]          # waits for BOTH build and test
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploying..."

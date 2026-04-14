@@ -1,0 +1,10 @@
+name: CI                        # Display name in the Actions tab
+
+on: [push]                      # Trigger event
+
+jobs:
+  build:                        # Job ID (arbitrary name)
+    runs-on: ubuntu-latest      # Runner label
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Hello, GitHub Actions!"

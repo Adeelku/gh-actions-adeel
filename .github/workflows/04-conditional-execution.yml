@@ -1,0 +1,22 @@
+name: Conditional Execution
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  conditional-steps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: echo "This runs only on main"
+        if: github.ref == 'refs/heads/main'
+
+      - run: echo "This runs only on PRs"
+        if: github.event_name == 'pull_request'
+
+      - run: echo "Previous step failed"
+        if: failure()                 # runs even if a previous step failed

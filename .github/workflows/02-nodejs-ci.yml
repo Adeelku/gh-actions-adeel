@@ -1,0 +1,19 @@
+name: Node.js CI
+
+on:                              # 1. TRIGGER
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:                            # 2. JOBS
+  test:                          # Job ID
+    runs-on: ubuntu-latest       # 3. RUNNER
+
+    steps:                       # 4. STEPS
+      - uses: actions/checkout@v4          # 5. USES (reusable action)
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci                        # 6. RUN (shell command)
+      - run: npm test
