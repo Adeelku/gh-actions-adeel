@@ -1,4 +1,4 @@
-name: CI                        # Display name in the Actions tab
+name: CI Minimum                        # Display name in the Actions tab
 
 on: [push]                      # Trigger event
 
