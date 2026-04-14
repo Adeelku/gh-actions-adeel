@@ -16,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Testing..."
+      - run: exit 1
 
   deploy:
     needs: [build, test]          # waits for BOTH build and test
