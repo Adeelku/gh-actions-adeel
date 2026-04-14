@@ -1,6 +1,6 @@
 name: learn-github-actions
 
-run-name: ${{ github.actor }} is showing GitHub Actions
+run-name: ${{ github.event_name }} is showing GitHub Actions
 
 on: [workflow_dispatch]
 
