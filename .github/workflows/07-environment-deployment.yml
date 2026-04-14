@@ -14,4 +14,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: echo "Deploying to production..."
-      - run: echo "App Name ${{ vars.APP_NAME }}"
+      - run: echo "App Name ${{ vars.APP_NAME }} and Secret ${{ secrets.DEPLOY_TOKEN }}"
