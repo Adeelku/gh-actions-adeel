@@ -2,10 +2,14 @@ name: learn-github-actions
 
 run-name: ${{ github.event_name }} is showing GitHub Actions
 
-on: [workflow_dispatch]
+on: [workflow_dispatch, push ]
 
 jobs:
   check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+  check-No-version:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
