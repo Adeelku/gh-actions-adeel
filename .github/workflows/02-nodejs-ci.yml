@@ -15,6 +15,7 @@ jobs:                            # 2. JOBS
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: cd app
-      - run: npm ci                        # 6. RUN (shell command)
+      - run: npm install                    # 6. RUN (shell command)
+        working-directory: app
       - run: npm test
+        working-directory: app
