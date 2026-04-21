@@ -1,15 +1,14 @@
-name: Scheduled Cron Job
+# Daily Cron Job
+
+This workflow is scheduled to run every day at 19:00 (7 PM) UTC.
 
 on:
   schedule:
-    - cron: '0 8 * * 1'  # Every Monday at 8:00 AM UTC
-  workflow_dispatch:        # Allow manual trigger
+    - cron: '0 19 * * *'  
 
 jobs:
-  scheduled-task:
+  example_job:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Run scheduled task
-        run: echo "Running scheduled job at $(date)"
-# t
+      - name: Run a sample step
+        run: echo "This job runs daily at 19:00 UTC."
