@@ -1,0 +1,15 @@
+name: Scheduled Cron Job
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'  # Every Monday at 8:00 AM UTC
+  workflow_dispatch:        # Allow manual trigger
+
+jobs:
+  scheduled-task:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run scheduled task
+        run: echo "Running scheduled job at $(date)"
+# t
