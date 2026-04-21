@@ -4,7 +4,7 @@ on:
   workflow_run:
     workflows: [Validation]
     types: [completed]
-    branches: [test]
+    branches: [main]
   workflow_dispatch:        # Allow manual trigger
 
 #   schedule:
