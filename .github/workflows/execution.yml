@@ -1,0 +1,28 @@
+name: Execution
+
+on:
+  workflow_run:
+    workflows: [Validation]
+    types: [completed]
+    branches: [test]
+  workflow_dispatch:        # Allow manual trigger
+
+#   schedule:
+#     - cron: '0 8 * * 1'  # Every Monday at 8:00 AM UTC
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: echo hello World
+
