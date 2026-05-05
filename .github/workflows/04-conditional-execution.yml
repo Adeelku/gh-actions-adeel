@@ -16,7 +16,7 @@ jobs:
       - run: echo "This runs only on main"
         if: github.ref == 'refs/heads/main'
 
-      - run: echo "This runs only on PRs"
+      - run: echo "This runs only on Manual triggers"
         if: github.event_name == 'workflow_dispatch'
 
       - run: echo "Previous step failed"
