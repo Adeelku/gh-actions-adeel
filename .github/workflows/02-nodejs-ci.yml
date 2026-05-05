@@ -5,6 +5,7 @@ on:                              # 1. TRIGGER
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch: 
 
 jobs:                            # 2. JOBS
   test:                          # Job ID
