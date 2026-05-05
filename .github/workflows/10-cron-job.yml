@@ -1,6 +1,5 @@
 # Daily Cron Job
-
-This workflow is scheduled to run every day at 19:00 (7 PM) UTC.
+name: Daily Cron Job
 
 on:
   schedule:
